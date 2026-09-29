@@ -102,6 +102,16 @@ function showPage(){
 }
 window.addEventListener('hashchange',showPage);
 showPage();
+document.querySelectorAll('a[href="#inicio"]').forEach(link=>link.addEventListener('click',event=>{
+  event.preventDefault();
+  if(location.hash==='#inicio'||location.hash===''){
+    showPage();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }else{
+    location.hash='inicio';
+    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'smooth'}));
+  }
+}));
 if(window.lucide)lucide.createIcons();
 
 function socialImage(network){
