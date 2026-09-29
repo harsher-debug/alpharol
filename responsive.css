@@ -1,0 +1,113 @@
+/* Mobile layouts follow content height and keep controls comfortably touchable. */
+:focus-visible { outline: 3px solid #008de2; outline-offset: 4px; }
+@media (max-width: 1100px) {
+  .topbar { height: 88px; padding: 4px 20px; }
+  .topbar .brand-logo { width: 142px; height: 80px; }
+  .topbar.menu-open { height: 88px; padding: 4px 20px; flex-wrap: nowrap; }
+  .topbar.menu-open nav { position: absolute; top: 100%; left: 0; right: 0; width: auto; margin: 0; padding: 12px 24px 20px; max-height: calc(100dvh - 88px); overflow-y: auto; background: #fff; box-shadow: 0 14px 22px #08203920; }
+  .topbar.menu-open nav a { min-height: 48px; padding: 12px 4px; font-size: 16px; }
+  html { scroll-padding-top: 104px; }
+  .hero { height: auto; }
+  .hero-quick { display: none; }
+  .full-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  body { background-attachment: scroll; }
+  .container, .catalog > .container, .brands-row,
+  .company .company-grid, .contact .contact-grid { width: calc(100% - 40px); }
+  .container > *, .solutions-grid > *, .contact-grid > * { min-width: 0; }
+  .hero { min-height: 0; }
+  .hero-content { padding-block: 40px; }
+  .hero h1 { font-size: 34px; line-height: 1.18; }
+  .hero h1 br, .section-heading h2 br, .solutions-copy h2 br, .benefits-heading h2 br { display: none; }
+  .hero-copy { max-width: 100%; font-size: 16px; line-height: 1.65; margin-block: 22px; }
+  .hero-shade { background: rgba(0, 20, 34, .8); }
+  .eyebrow { font-size: 12px; line-height: 1.6; }
+  .actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .button, .company .button, .solutions-copy .button, .contact .quote-form .button { min-height: 48px; font-size: 16px; line-height: 1.4; padding: 12px 16px; text-align: center; white-space: normal; }
+  .button svg, .button .brand-icon { flex-shrink: 0; }
+  .brands { padding-block: 20px; }
+  .brand-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 0; overflow: visible; }
+  .brand-list a { min-height: 60px; }
+  .brand-list img { max-width: 120px; height: 44px; }
+  .catalog, .service-benefits, .contact { padding-block: 44px; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+  .section-heading h2, .benefits-heading h2, .solutions-copy h2, .company h2, .contact-heading h2 { font-size: 28px; line-height: 1.25; }
+  .section-heading > a { max-width: none; font-size: 16px; text-align: left; padding: 8px 0; }
+  .catalog #productGrid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(280px, 86%); gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 0 16px; }
+  .catalog #productGrid .product-visual { min-height: 0; aspect-ratio: 1; }
+  .catalog #productGrid .product-card > div:last-child { padding: 18px; min-height: 120px; }
+  .catalog #productGrid .product-card strong { font-size: 20px; }
+  .solutions { padding-block: 44px; background: linear-gradient(#001e35df,#001e35ed),url('assets/solutions-workshop.png') center/cover; }
+  .solutions-grid { grid-template-columns: 1fr; gap: 28px; }
+  .solutions-copy > p:not(.eyebrow) { max-width: none; font-size: 16px; line-height: 1.65; margin-block: 20px; }
+  .solution-list { grid-column: auto; padding: 0; border: 0; display: grid; gap: 16px; }
+  .solution-list li { margin: 0; font-size: 16px; }
+  .contract-card { grid-column: auto; grid-row: auto; justify-self: stretch; width: 100%; padding: 20px; gap: 8px; }
+  .contract-card p { padding: 14px; }
+  .contract-card button { min-height: 48px; font-size: 16px; }
+  .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+  .benefit-card { padding: 24px; }
+  .benefit-card h3 { font-size: 22px; line-height: 1.3; }
+  .benefit-card p { font-size: 16px; line-height: 1.65; }
+  .benefit-card > a, .benefit-card > button { font-size: 15px; }
+  .company { padding: 0; }
+  .company .company-grid { min-height: 0; padding-block: 44px; }
+  .company .company-copy { width: 100%; }
+  .company:after { background: rgba(4, 18, 30, .86); }
+  .company .company-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.7; max-width: none; margin-block: 22px; }
+  .company .values { gap: 24px 16px; margin-block: 28px; }
+  .company .values span { font-size: 14px; line-height: 1.5; padding: 0; gap: 10px; }
+  .contact .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-heading { margin-bottom: 28px; }
+  .contact .quote-form { gap: 18px; }
+  .contact .quote-form h2 { font-size: 24px; }
+  .contact .quote-form label { font-size: 15px; line-height: 1.5; }
+  .contact .quote-form input, .contact .quote-form select { height: 50px; font-size: 16px; margin-top: 8px; max-width: 100%; }
+  .contact .contact-details { padding: 28px 0 0; border-left: 0; border-top: 1px solid #cbd8e3; gap: 24px; }
+  .contact .contact-details p { font-size: 16px; padding-left: 38px; }
+  .contact-details a { padding-block: 6px; }
+  .directory { padding-block: 28px 44px; }
+  .directory h1 { font-size: 30px; line-height: 1.25; }
+  .catalog-search label, #resultCount { font-size: 15px; }
+  .catalog-search input { min-height: 48px; font-size: 16px; }
+  .full-product-grid, .partner-directory { grid-template-columns: 1fr; gap: 20px; }
+  .full-product > img { height: 220px; }
+  .full-product-copy { padding: 20px; gap: 12px; }
+  .full-product-copy strong { font-size: 22px; }
+  .full-product-copy small, .full-product-copy > span, .full-product-copy b { font-size: 16px; }
+  .partner-entry { padding: 28px 20px; }
+  .partner-entry > img { height: 74px; }
+  .partner-entry a { min-height: 48px; font-size: 16px; }
+  dialog { max-height: calc(100dvh - 32px); width: calc(100% - 24px); overflow-y: auto; overscroll-behavior: contain; }
+  #productDialog[open] { display: block; }
+  .dialog-image { min-height: 0; height: 200px; background-size: contain; background-repeat: no-repeat; background-color: #f4f4f4; }
+  .dialog-body { padding: 28px 20px; }
+  .dialog-body h2 { font-size: 28px; line-height: 1.25; overflow-wrap: anywhere; }
+  .dialog-close { width: 44px; height: 44px; background: #fff; border-radius: 4px; }
+  .contract-dialog { padding-top: 64px; }
+  .dialog-features, .dialog-description, .saving { font-size: 16px; line-height: 1.65; }
+  .plan-points { grid-template-columns: 1fr; }
+  .dialog-body .button { width: 100%; }
+  .site-footer { background: linear-gradient(to bottom,#fff,#d4e8f5); padding-top: 36px; }
+  .site-footer .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .footer-identity, .footer-reach { grid-column: 1 / -1; grid-row: auto; }
+  .footer-links { grid-column: auto; }
+  .footer-links > a { min-height: 48px; font-size: 15px; }
+  .site-footer .footer-reach { color: #102b40; padding: 24px 0 0; border-top: 1px solid #b7cbd8; }
+  .footer-reach img { filter: none; }
+  .site-footer .footer-bottom { flex-direction: column; align-items: flex-start; padding-bottom: 88px; }
+  .footer-bottom small { max-width: none; color: #223f54; font-size: 13px; }
+  .footer-bottom > a { color: #102b40; }
+  .whatsapp-float { width: 48px; height: 48px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); }
+  .whatsapp-float .brand-icon { width: 25px; height: 25px; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 30px; }
+  .company .values, .site-footer .footer-inner { grid-template-columns: 1fr; }
+  .company .values br { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

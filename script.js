@@ -22,10 +22,25 @@ function openProduct(name){const product=products.find(item=>item[0]===name);pro
 const contractDialog=document.querySelector('#contractDialog');document.querySelectorAll('[data-open-contract]').forEach(button=>button.addEventListener('click',()=>contractDialog.showModal()));
 document.querySelectorAll('.dialog-close').forEach(button=>button.addEventListener('click',()=>button.closest('dialog').close()));
 document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()}));
-document.querySelector('.menu-button').addEventListener('click',e=>{const header=document.querySelector('.topbar');const open=header.classList.toggle('menu-open');e.currentTarget.setAttribute('aria-expanded',open);});
-document.querySelectorAll('.topbar nav a').forEach(link=>link.addEventListener('click',()=>{document.querySelector('.topbar').classList.remove('menu-open');document.querySelector('.menu-button').setAttribute('aria-expanded','false')}));
+const menuButton=document.querySelector('.menu-button');
+const header=document.querySelector('.topbar');
+const mainNav=header.querySelector('nav');
+mainNav.id='mainNavigation';
+menuButton.setAttribute('aria-controls',mainNav.id);
+function setMenuOpen(open){
+  header.classList.toggle('menu-open',open);
+  menuButton.setAttribute('aria-expanded',String(open));
+  menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+}
+menuButton.addEventListener('click',()=>setMenuOpen(!header.classList.contains('menu-open')));
+mainNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&header.classList.contains('menu-open')){setMenuOpen(false);menuButton.focus();}
+});
+document.addEventListener('click',event=>{if(!header.contains(event.target))setMenuOpen(false);});
+window.matchMedia('(max-width: 1100px)').addEventListener('change',()=>setMenuOpen(false));
 document.querySelector('.quote-form').addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const name=data.get('nome');const phone=data.get('telefone');const need=data.get('produto');const text=`Olá! Meu nome é ${name}. Meu WhatsApp é ${phone}. E-mail: ${data.get('email')}. Preciso de: ${need}.`;document.querySelector('.form-status').textContent='Abrindo WhatsApp para enviar sua solicitação...';window.open(`https://wa.me/5548998478255?text=${encodeURIComponent(text)}`,'_blank');});
-if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);const mm=gsap.matchMedia();mm.add({'motion':'(prefers-reduced-motion: no-preference)'},()=>{gsap.from('.hero-content > *',{y:24,autoAlpha:0,stagger:.11,duration:.72,ease:'power3.out'});gsap.to('.hero-photo',{scale:1.1,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.7}});ScrollTrigger.batch('.reveal',{start:'top 88%',once:true,onEnter:items=>gsap.from(items,{y:22,autoAlpha:0,stagger:.055,duration:.45,ease:'power2.out'})});gsap.from('.solutions-copy,.solution-list,.contract-card',{y:28,autoAlpha:0,stagger:.13,duration:.65,ease:'power3.out',scrollTrigger:{trigger:'.solutions',start:'top 75%',once:true}});});}
+if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);const mm=gsap.matchMedia();mm.add('(min-width: 761px) and (prefers-reduced-motion: no-preference)',()=>{gsap.from('.hero-content > *',{y:24,autoAlpha:0,stagger:.11,duration:.72,ease:'power3.out'});gsap.to('.hero-photo',{scale:1.1,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.7}});ScrollTrigger.batch('.reveal',{start:'top 88%',once:true,onEnter:items=>gsap.from(items,{y:22,autoAlpha:0,stagger:.055,duration:.45,ease:'power2.out'})});gsap.from('.solutions-copy,.solution-list,.contract-card',{y:28,autoAlpha:0,stagger:.13,duration:.65,ease:'power3.out',scrollTrigger:{trigger:'.solutions',start:'top 75%',once:true}});});}
 const icon=(name)=>'<i data-lucide="'+name+'" aria-hidden="true"></i>';
 document.querySelectorAll('.hero-quick span').forEach((el,i)=>el.outerHTML=icon(i?'shopping-cart':'map-pin'));
 document.querySelectorAll('.solution-list li').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',icon(['badge-dollar-sign','refresh-cw','component','wrench','drafting-compass','headset'][i])));
