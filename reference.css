@@ -121,6 +121,39 @@ footer .container>p{font-size:9px}
 @media(max-width:600px){html{scroll-padding-top:70px}.topbar{height:70px;padding-inline:5%}.brand{font-size:29px}.brand .alpha{font-size:69px}.container{width:90%}.hero{height:480px}.hero-content{padding-top:52px}h1{font-size:32px;line-height:1.08}.hero-copy{font-size:13px;max-width:310px}.hero-photo{background-position:68% center}.hero-shade{background:linear-gradient(90deg,rgba(0,19,34,.94),rgba(0,19,34,.67))}.actions{gap:10px}.brands{padding:16px 0}.brands-row>p{margin:0 0 10px}.brand-list{min-height:60px;gap:23px;padding-inline:15px}.catalog{padding:25px 0}.section-heading h2{font-size:23px}.section-heading>a{max-width:90px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-card strong{font-size:12px}.product-card small{font-size:10px}.product-card>div:last-child{padding:10px}.solutions{padding:30px 0;background-position:65% center}.solutions-grid{grid-template-columns:1fr}.solutions-copy h2{font-size:25px}.solutions-copy>p:not(.eyebrow){font-size:13px}.solution-list li{font-size:12px}.contract-card{grid-column:1;grid-row:auto;justify-self:start;width:240px}.company-grid,.contact-grid{width:100%;grid-template-columns:1fr}.building-photo{min-height:230px;clip-path:none}.company-copy{padding:25px 5%}.company h2{font-size:22px}.company-copy>p:not(.eyebrow){font-size:13px}.values span{font-size:10px}.company .button{min-height:40px;font-size:11px}.steps{padding:24px 5%}.steps li span{font-size:10px}.steps li strong{font-size:11px}.quote-form{padding:22px 5%;gap:9px}.quote-form h2{font-size:21px}.quote-form .form-intro{font-size:12px}.quote-form label{font-size:12px}.quote-form input,.quote-form select{height:42px;font-size:16px}.quote-form .button{min-height:44px;font-size:12px}.contact-details{padding:22px 5%;grid-template-columns:1fr 1fr}.contact-details p,.contact-details strong,.marketplace{font-size:11px}.steps li>b{left:4px}.menu-button{min-width:44px;min-height:44px;justify-content:center;align-items:center}.button{min-height:44px}.dialog-body h2{font-size:28px}.hero-quick{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
+/* Full-width company photograph followed by the dedicated contact section. */
+.company{position:relative;isolation:isolate;background:#071d2b;color:white}
+.company .company-grid{position:relative;display:flex;align-items:center;justify-content:flex-end;width:min(1180px,90%);min-height:440px;padding:48px 0}
+.company .building-photo{position:absolute;inset:0;width:100%;height:100%;min-height:0;clip-path:none;background-position:center;z-index:-2}
+.company .company-grid{position:static}
+.company:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,30,.08) 0%,rgba(4,18,30,.32) 35%,rgba(4,18,30,.91) 65%,rgba(4,18,30,.96) 100%);z-index:-1}
+.company .company-copy{width:48%;padding:0;background:transparent}
+.company .eyebrow{color:#6dd0ff;font-size:11px;margin-bottom:12px}
+.company h2{font-size:30px;line-height:1.2;max-width:440px}
+.company .company-copy>p:not(.eyebrow){font-size:14px;line-height:1.75;max-width:480px;margin:18px 0}
+.company .values{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;margin:26px 0}
+.company .values span{font-size:11px;border:0;gap:12px}
+.company .values svg{color:#6dd0ff;width:28px;height:28px}
+.company .button{min-height:44px;padding:10px 22px;font-size:12px}
+.contact{background:#fff;padding:58px 0 68px}
+.contact-heading{margin-bottom:28px}
+.contact-heading h2{font-size:30px;line-height:1.2}
+.contact-heading>p:last-child{font-size:14px;line-height:1.6;color:#526c7e;max-width:570px}
+.contact .contact-grid{width:min(1180px,90%);grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:64px;align-items:start}
+.contact .quote-form{padding:0;background:transparent;gap:13px}
+.contact .quote-form h2{font-size:20px;line-height:1.3}
+.contact .quote-form .form-intro{font-size:12px;line-height:1.6;color:#526c7e;margin:0 0 5px}
+.contact .quote-form label{font-size:12px;line-height:1.5}
+.contact .quote-form input,.contact .quote-form select{height:44px;font-size:16px;padding:0 12px;margin-top:5px;border-color:#cbd8e3}
+.contact .quote-form .button{min-height:46px;font-size:13px;margin-top:4px}
+.contact .contact-details{display:flex;flex-direction:column;gap:22px;grid-column:auto;padding:0 0 0 42px;background:transparent;border-left:1px solid #dce6ed}
+.contact .contact-details p{font-size:14px;line-height:1.6;padding-left:40px;margin:0;min-height:48px}
+.contact .contact-details strong{font-size:12px;margin-bottom:3px}
+.contact .contact-details p>svg{width:27px;height:27px;top:7px}
+.contact .marketplace{font-size:12px;line-height:1.6;padding:12px 0 0 40px;min-height:44px}
+@media(max-width:920px){.company .company-copy{width:56%}.company h2{font-size:26px}.contact .contact-grid{gap:32px}.contact .contact-details{padding-left:24px}}
+@media(max-width:600px){.company .company-grid{min-height:550px;padding:46px 0}.company .building-photo{background-position:35% center}.company:after{background:rgba(4,18,30,.83)}.company .company-copy{width:100%}.company h2{font-size:27px}.company .company-copy>p:not(.eyebrow){font-size:14px}.company .values{gap:22px 12px}.company .values span{font-size:11px}.contact{padding:36px 0 48px}.contact-heading h2{font-size:27px}.contact .contact-grid{grid-template-columns:1fr;gap:32px}.contact .contact-details{padding:28px 0 0;border-left:0;border-top:1px solid #dce6ed;gap:18px}.contact .contact-details p{font-size:13px}.contact .contact-details a{overflow-wrap:anywhere}}
+
 /* Catalog and partner destinations share the site's persistent navigation. */
 .brands-row{display:block;width:90%;max-width:none}
 .brand-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;width:100%;background:transparent;min-height:90px;padding:0}
