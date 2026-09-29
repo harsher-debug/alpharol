@@ -122,3 +122,32 @@
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* A process rail replaces the repeated benefit cards with a clear customer journey. */
+.operating-steps{padding:76px 0 84px;background:linear-gradient(rgba(246,249,251,.88),rgba(246,249,251,.88)),url('assets/industrial-background.jpg') center/cover;border-block:1px solid rgba(8,32,57,.08)}
+.steps-heading{max-width:720px;margin-bottom:42px}
+.steps-heading h2{font-size:34px;line-height:1.2;margin:0 0 16px}
+.steps-heading>p:last-child{font-size:17px;line-height:1.6;color:var(--surface-copy);max-width:650px;margin:0}
+.steps-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid #b7cbd8}
+.step-item{position:relative;padding:28px 26px 8px 0;margin-right:26px;border-right:1px solid #cbd8e3}
+.step-item:last-child{margin-right:0;border-right:0}
+.step-number{display:block;color:#008de2;font:700 14px/1 var(--body);letter-spacing:.08em;margin-bottom:24px}
+.step-icon{display:grid;place-items:center;width:48px;height:48px;color:#007dc2;background:#e8f4fb;border-radius:5px;margin-bottom:20px}
+.step-icon svg{width:25px;height:25px}
+.step-item h3{font-size:20px;line-height:1.3;color:var(--surface-copy-strong);margin:0 0 12px}
+.step-item p{font-size:15px;line-height:1.65;color:var(--surface-copy);margin:0;max-width:230px}
+@media(max-width:760px){
+  .operating-steps{padding:46px 0 50px}
+  .steps-heading{margin-bottom:28px}
+  .steps-heading h2{font-size:28px;line-height:1.25}
+  .steps-heading h2 br{display:none}
+  .steps-heading>p:last-child{font-size:16px;line-height:1.6}
+  .steps-flow{grid-template-columns:1fr 1fr;gap:0 14px;border-top:0}
+  .step-item{padding:20px 0 22px;margin:0;border-right:0;border-top:1px solid #b7cbd8}
+  .step-item:nth-child(-n+2){border-top:1px solid #b7cbd8}
+  .step-number{font-size:13px;margin-bottom:16px}
+  .step-icon{width:42px;height:42px;margin-bottom:14px}
+  .step-icon svg{width:22px;height:22px}
+  .step-item h3{font-size:16px;line-height:1.3;margin-bottom:8px}
+  .step-item p{font-size:13px;line-height:1.5;max-width:none}
+}
