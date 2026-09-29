@@ -1,4 +1,9 @@
 /* Proportions and image treatment matched to the supplied AlphaRol reference. */
+.brand{flex-shrink:0}
+.brand-logo{display:block;width:130px;height:78px;object-fit:contain}
+footer .brand{background:#fff;border-radius:4px;padding:5px 12px}
+footer .brand-logo{width:130px;height:90px}
+@media(max-width:600px){.topbar .brand-logo{width:105px;height:60px}}
 :root{--display:'Manrope',sans-serif}
 html{scroll-padding-top:85px}
 body{font-size:14px}
