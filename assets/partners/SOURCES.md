@@ -1,11 +1,11 @@
 # Partner logos
 
-Original artwork downloaded locally, except FAG, which was rebuilt as a vector mark from the client-provided reference image to keep it sharp at every size.
+Original artwork downloaded locally.
 
 - SKF: https://upload.wikimedia.org/wikipedia/commons/b/b8/SKF_logo.svg
 - NSK: https://www.nsk.com/content/dam/nsk/common/logo/header-logo.svg
 - TIMKEN: https://www.timken.com/wp-content/uploads/2026/06/timken-logo.svg
-- FAG: client-provided reference image, rebuilt as assets/partners/fag.svg
+- FAG: https://de.wikipedia.org/wiki/Datei:FAG_logo.svg via MediaWiki thumbnail, saved as assets/partners/fag-official.png
 - INA: https://upload.wikimedia.org/wikipedia/commons/7/76/INA_logo.svg
 - NTN: https://upload.wikimedia.org/wikipedia/commons/1/13/NTN_Corporation_Logo.svg
 
