@@ -37,6 +37,11 @@ document.querySelector('.header-contact').insertAdjacentHTML('beforeend','<a cla
 document.querySelectorAll('.button b,.section-heading b,.contract-card button b').forEach(el=>el.innerHTML=icon('arrow-right'));
 document.querySelector('#contractDialog .button').addEventListener('click',()=>contractDialog.close());
 const productSelect=document.querySelector('select[name="produto"]');
+document.querySelectorAll('[data-catalog-search]').forEach(link=>link.addEventListener('click',()=>{
+  const search=document.querySelector('#productSearch');
+  search.value=link.dataset.catalogSearch;
+  search.dispatchEvent(new Event('input',{bubbles:true}));
+}));
 productSelect.innerHTML='<option value="">O que você precisa?</option>'+products.map(p=>'<option>'+p[0]+'</option>').join('')+'<option>Outra necessidade</option>';
 productSelect.required=true;
 if(window.lucide)lucide.createIcons();
