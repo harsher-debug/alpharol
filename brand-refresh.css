@@ -7,12 +7,12 @@
 .catalog #productGrid .product-card small{font-size:15px;line-height:1.5;margin-top:8px}
 @media(max-width:1200px){.catalog #productGrid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:260px;overflow-x:auto;scroll-snap-type:x mandatory}.catalog #productGrid .product-card{scroll-snap-align:start}}
 @media(max-width:600px){.catalog>.container{width:90%}.catalog #productGrid{grid-auto-columns:min(280px,82vw);gap:16px}.catalog #productGrid .product-visual{min-height:250px}.catalog #productGrid .product-card>div:last-child{min-height:116px}}
-.service-benefits{padding:76px 0 84px;background:rgba(246,249,251,.94);border-block:1px solid rgba(8,32,57,.08)}
+.service-benefits{padding:76px 0 84px;background:linear-gradient(rgba(246,249,251,.82),rgba(246,249,251,.82)),url('assets/industrial-background.jpg') center 46%/cover no-repeat;border-block:1px solid rgba(8,32,57,.08)}
 .benefits-heading{max-width:740px;margin-bottom:32px}
 .benefits-heading h2{font-size:34px;line-height:1.2;margin:0 0 16px}
 .benefits-heading>p:last-child{font-size:17px;line-height:1.6;color:#526c7e;max-width:660px;margin:0}
 .benefits-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.benefit-card{display:flex;flex-direction:column;align-items:flex-start;padding:26px 22px;background:#fff;border:1px solid #dce6ed;border-radius:6px;box-shadow:0 8px 22px rgba(8,32,57,.04);transition:transform .2s,box-shadow .2s}
+.benefit-card{display:flex;flex-direction:column;align-items:flex-start;padding:26px 22px;background:rgba(255,255,255,.94);border:1px solid rgba(207,222,232,.92);border-radius:6px;box-shadow:0 8px 22px rgba(8,32,57,.07);backdrop-filter:blur(3px);transition:transform .2s,box-shadow .2s}
 .benefit-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(8,32,57,.09)}
 .benefit-icon{display:grid;place-items:center;width:48px;height:48px;background:#ecf6fc;border-radius:6px;color:#007dc2;margin-bottom:22px}
 .benefit-icon svg{width:27px;height:27px}
