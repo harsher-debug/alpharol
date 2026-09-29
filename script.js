@@ -47,7 +47,7 @@ document.querySelectorAll('.hero-quick span').forEach((el,i)=>el.outerHTML=icon(
 document.querySelectorAll('.solution-list li').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',icon(['badge-dollar-sign','refresh-cw','component','wrench','drafting-compass','headset'][i])));
 document.querySelectorAll('.values span').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',icon(['badge-check','contact','settings','handshake'][i])));
 document.querySelectorAll('.steps li').forEach((el,i)=>el.querySelector('b').insertAdjacentHTML('afterend','<div class="step-icon">'+icon(['message-circle','clipboard-list','truck'][i])+'</div>'));
-document.querySelectorAll('.contact-details p').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',icon(['message-circle','mail','instagram','map-pin'][i])));
+document.querySelectorAll('.contact-details p').forEach((el,i)=>el.insertAdjacentHTML('afterbegin',icon(['message-circle','mail','instagram','map-pin','clock-3'][i])));
 document.querySelector('.whatsapp-float').innerHTML=icon('message-circle');
 document.querySelector('.header-contact').insertAdjacentHTML('beforeend','<a class="header-instagram" href="https://instagram.com/AlphaRol_" target="_blank" rel="noreferrer">@AlphaRol_<small>Siga nosso insta</small></a>');
 document.querySelectorAll('.button b,.section-heading b,.contract-card button b').forEach(el=>el.innerHTML=icon('arrow-right'));
