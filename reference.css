@@ -68,7 +68,7 @@ h1{font-size:38px;line-height:1.03;max-width:490px}
 .contract-card button{margin:15px 0 0;min-height:38px}
 .company{padding:0}
 .company-grid{width:100%;max-width:1440px;grid-template-columns:47% 53%}
-.building-photo{min-height:225px;background:url('assets/company-exterior.png') center/cover;clip-path:polygon(0 0,100% 0,91% 100%,0 100%)}
+.building-photo{min-height:225px;background:url('assets/company-workshop.png') center/cover;clip-path:polygon(0 0,100% 0,91% 100%,0 100%)}
 .company-copy{padding:18px 5% 15px;background:white}
 .company h2{font-size:20px;line-height:1.2}
 .company-copy>p:not(.eyebrow){font-size:10px;max-width:405px;margin:9px 0}
