@@ -16,7 +16,7 @@ products.splice(11,0,['Esferas inox','Alta precisão','Esferas de aço inox para
 const productGrid=document.querySelector('#productGrid');
 const productImages=['rolamentos.png','mancais.jpg','correias-sincronizadas.png','retentores.jpg','correntes.jpg','polias.png','guias-lineares.png','acoplamentos.png','engrenagens.png','correias-v.png','correias-transportadoras.png','componentes-especiais.png'];
 productImages.splice(11,0,'esferas-inox.png');
-products.forEach(([name,brand],index)=>{const card=document.createElement('article');card.className='product-card reveal';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Ver detalhes de ${name}`);card.innerHTML=`<div class="product-visual"></div><div><strong>${name}</strong><small>${brand}</small></div>`;const visual=card.querySelector('.product-visual');visual.style.backgroundImage=`url('assets/products/${productImages[index]}')`;visual.style.backgroundPosition='center';card.addEventListener('click',()=>openProduct(name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(name)}});productGrid.append(card)});
+products.slice(0,6).forEach(([name,brand],index)=>{const card=document.createElement('article');card.className='product-card reveal';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Ver detalhes de ${name}`);card.innerHTML=`<div class="product-visual"></div><div><strong>${name}</strong><small>${brand}</small></div>`;const visual=card.querySelector('.product-visual');visual.style.backgroundImage=`url('assets/products/${productImages[index]}')`;visual.style.backgroundPosition='center';card.addEventListener('click',()=>openProduct(name));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(name)}});productGrid.append(card)});
 const productDialog=document.querySelector('#productDialog');
 function openProduct(name){const product=products.find(item=>item[0]===name);productDialog.querySelector('h2').textContent=product[0];productDialog.querySelector('.dialog-description').textContent=product[2];productDialog.querySelector('.dialog-features').innerHTML=product[3].map(item=>`<li>${item}</li>`).join('');productDialog.querySelector('.dialog-whatsapp').href=`https://wa.me/5548998478255?text=${encodeURIComponent('Ola! Quero consultar '+name+'.')}`;productDialog.querySelector('.dialog-image').style.backgroundImage=`url('assets/products/${productImages[products.indexOf(product)]}')`;productDialog.showModal()}
 const contractDialog=document.querySelector('#contractDialog');document.querySelector('[data-open-contract]').addEventListener('click',()=>contractDialog.showModal());
@@ -39,4 +39,62 @@ document.querySelector('#contractDialog .button').addEventListener('click',()=>c
 const productSelect=document.querySelector('select[name="produto"]');
 productSelect.innerHTML='<option value="">O que você precisa?</option>'+products.map(p=>'<option>'+p[0]+'</option>').join('')+'<option>Outra necessidade</option>';
 productSelect.required=true;
+if(window.lucide)lucide.createIcons();
+const partners = [
+  {name:'SKF', image:'skf.jpg', url:'https://www.skf.com/br'},
+  {name:'NSK', image:'nsk.svg', url:'https://www.nsk.com/'},
+  {name:'TIMKEN', image:'timken.svg', url:'https://www.timken.com/'},
+  {name:'FAG', image:'fag.png', url:'https://www.schaeffler.com/'},
+  {name:'INA', image:'ina.svg', url:'https://www.schaeffler.com/'},
+  {name:'NTN', image:'ntn.svg', url:'https://www.ntnglobal.com/en/'}
+];
+const logoMarkup = partner => '<img src="assets/partners/'+partner.image+'" alt="'+partner.name+'" width="180" height="70" />';
+document.querySelector('.brand-list').innerHTML=partners.map(partner=>'<a href="#parceiros" aria-label="Ver parceiros: '+partner.name+'">'+logoMarkup(partner)+'</a>').join('');
+document.querySelector('#partnerDirectory').innerHTML=partners.map(partner=>'<article class="partner-entry">'+logoMarkup(partner)+'<h2>'+partner.name+'</h2><a href="'+partner.url+'" target="_blank" rel="noopener noreferrer">Site oficial '+icon('arrow-up-right')+'</a><a href="https://wa.me/5548998478255?text='+encodeURIComponent('Olá! Gostaria de consultar produtos '+partner.name+'.')+'" target="_blank" rel="noopener noreferrer">Consultar produtos '+icon('message-circle')+'</a></article>').join('');
+const fullGrid=document.querySelector('#fullProductGrid');
+products.forEach(([name,brand,description],index)=>{
+  const card=document.createElement('button');
+  card.type='button';
+  card.className='product-card full-product';
+  card.innerHTML='<img src="assets/products/'+productImages[index]+'" alt="" width="260" height="200" loading="lazy" /><span class="full-product-copy"><strong>'+name+'</strong><small>'+brand+'</small><span>'+description+'</span><b>Ver detalhes →</b></span>';
+  card.addEventListener('click',()=>openProduct(name));
+  fullGrid.append(card);
+});
+const normalizeSearch=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+document.querySelector('#productSearch').addEventListener('input',event=>{
+  const query=normalizeSearch(event.target.value.trim());
+  let count=0;
+  [...fullGrid.children].forEach((card,index)=>{
+    const matches=normalizeSearch(products[index].join(' ')).includes(query);
+    card.hidden=!matches;
+    if(matches)count++;
+  });
+  document.querySelector('#resultCount').textContent=count+' produtos encontrados';
+  document.querySelector('#emptyProducts').hidden=count!==0;
+});
+document.querySelector('#resultCount').textContent=products.length+' produtos disponíveis';
+function showPage(){
+  const route=location.hash;
+  const directory=route==='#catalogo'||route==='#parceiros';
+  document.querySelectorAll('main > section').forEach(section=>{
+    section.hidden=section.classList.contains('directory') ? '#'+section.id!==route : directory;
+  });
+  document.querySelectorAll('.topbar nav a').forEach(link=>{
+    const current=link.getAttribute('href')===(route||'#inicio');
+    link.classList.toggle('is-active',current);
+    if(current)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
+  });
+  document.title=directory ? (route==='#catalogo'?'Produtos':'Parceiros')+' | AlphaRol' : 'AlphaRol | Soluções Industriais';
+  requestAnimationFrame(()=>{
+    if(directory){
+      window.scrollTo({top:0,behavior:'instant'});
+      document.querySelector(route+' h1').focus({preventScroll:true});
+    }else if(route){
+      document.getElementById(route.slice(1))?.scrollIntoView({behavior:'instant'});
+    }
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  });
+}
+window.addEventListener('hashchange',showPage);
+showPage();
 if(window.lucide)lucide.createIcons();
