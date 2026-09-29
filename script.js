@@ -29,6 +29,7 @@ mainNav.id='mainNavigation';
 menuButton.setAttribute('aria-controls',mainNav.id);
 function setMenuOpen(open){
   header.classList.toggle('menu-open',open);
+  document.body.classList.toggle('menu-is-open',open);
   menuButton.setAttribute('aria-expanded',String(open));
   menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
 }

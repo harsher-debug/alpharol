@@ -1,11 +1,17 @@
 /* Mobile layouts follow content height and keep controls comfortably touchable. */
 :focus-visible { outline: 3px solid #008de2; outline-offset: 4px; }
 @media (max-width: 1100px) {
+  body.menu-is-open { overflow: hidden; }
   .topbar { height: 88px; padding: 4px 20px; }
   .topbar .brand-logo { width: 142px; height: 80px; }
   .topbar.menu-open { height: 88px; padding: 4px 20px; flex-wrap: nowrap; }
-  .topbar.menu-open nav { position: absolute; top: 100%; left: 0; right: 0; width: auto; margin: 0; padding: 12px 24px 20px; max-height: calc(100dvh - 88px); overflow-y: auto; background: #fff; box-shadow: 0 14px 22px #08203920; }
-  .topbar.menu-open nav a { min-height: 48px; padding: 12px 4px; font-size: 16px; }
+  .topbar.menu-open::after { content: ''; position: fixed; inset: 0; z-index: 0; background: rgba(2, 18, 33, .58); opacity: 1; }
+  .topbar nav { position: fixed; top: 0; right: 0; bottom: 0; z-index: 2; display: flex; flex-direction: column; align-items: stretch; width: min(82vw, 360px); height: 100dvh; margin: 0; padding: 112px 28px 28px; gap: 4px; overflow-y: auto; background: #fff; box-shadow: -18px 0 40px rgba(2, 18, 33, .22); transform: translateX(105%); transition: transform .25s ease; }
+  .topbar.menu-open nav { transform: translateX(0); }
+  .topbar.menu-open nav { width: min(82vw, 360px); }
+  .topbar.menu-open nav a { min-height: 58px; padding: 14px 8px; font-size: 21px; line-height: 1.3; border-bottom: 1px solid #dce6ed; }
+  .topbar.menu-open nav a:last-child { border-bottom: 0; }
+  .topbar .menu-button { position: relative; z-index: 3; }
   html { scroll-padding-top: 104px; }
   .hero { height: auto; }
   .hero-quick { display: none; }
