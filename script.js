@@ -65,9 +65,9 @@ const partners = [
   {name:'SKF', image:'skf.svg', url:'https://www.skf.com/br'},
   {name:'NSK', image:'nsk.svg', url:'https://www.nsk.com/'},
   {name:'TIMKEN', image:'timken.svg', url:'https://www.timken.com/'},
-  {name:'FAG', image:'fag-official.png', url:'https://www.schaeffler.com/'},
+  {name:'NTN', image:'ntn.svg', url:'https://www.ntnglobal.com/en/'},
   {name:'INA', image:'ina.svg', url:'https://www.schaeffler.com/'},
-  {name:'NTN', image:'ntn.svg', url:'https://www.ntnglobal.com/en/'}
+  {name:'FAG', image:'fag-official.png', url:'https://www.schaeffler.com/'}
 ];
 const logoMarkup = partner => '<img src="assets/partners/'+partner.image+'" alt="'+partner.name+'" width="180" height="70" />';
 document.querySelector('.brand-list').innerHTML=partners.map(partner=>'<a href="#parceiros" aria-label="Ver parceiros: '+partner.name+'">'+logoMarkup(partner)+'</a>').join('');
