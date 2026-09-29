@@ -1,0 +1,116 @@
+/* Proportions and image treatment matched to the supplied AlphaRol reference. */
+:root{--display:'Manrope',sans-serif}
+html{scroll-padding-top:85px}
+body{font-size:14px}
+.container{width:min(1180px,90%)}
+.topbar{height:88px;padding-inline:5%;gap:24px}
+.brand{font-style:italic;font-size:36px;font-weight:800;gap:12px}
+.brand .alpha{font-size:88px;letter-spacing:0;margin-right:-12px}
+.brand small{font-size:8px;letter-spacing:1px;text-align:center}
+.topbar nav{gap:20px;font-size:10px}
+.topbar nav a{padding:14px 0}
+.header-contact{gap:15px;font-size:10px}
+.header-contact .quote-mini{order:3}
+.section-heading>a,.contract-card button{display:flex;align-items:center;justify-content:center;gap:8px}
+.section-heading svg,.contract-card button svg{width:16px;height:16px}
+.quote-mini{border-radius:30px}
+.hero{height:390px}
+.hero-content{padding-top:56px}
+h1{font-size:38px;line-height:1.03;max-width:490px}
+.hero-copy{font-size:13px;line-height:1.45;max-width:375px;margin:14px 0 19px}
+.hero-shade{background:linear-gradient(90deg,rgba(0,20,34,.92),rgba(0,20,34,.68) 32%,rgba(0,20,34,.05) 65%)}
+.hero-photo{background-position:center 58%}
+.hero-quick{top:18px;right:0;width:196px;border-radius:16px 0 0 16px}
+.hero-quick div{padding:15px;align-items:center}
+.hero-quick b{font-size:10px}
+.hero-quick svg{width:27px;height:27px;color:#7dd4ff;flex-shrink:0}
+.scroll-cue{display:none}
+.eyebrow{font-size:11px;letter-spacing:1px}
+.button{font-size:11px;min-height:42px;padding:10px 20px;gap:8px}
+.button svg{width:18px;height:18px}
+.brands{padding:18px 0;background:#f3f5f8}
+.brands-row{gap:36px;align-items:flex-start}
+.brands-row>p{font-size:13px;min-width:295px;margin-top:8px;text-decoration:underline;font-weight:700}
+.brand-list{min-height:76px}
+.brand-list strong{font-size:34px;font-weight:800}
+.brand-list strong:nth-child(3){font-family:Georgia,serif;font-size:29px}
+.brand-list strong:nth-child(5){background:#158346;color:white;padding:5px;font-size:25px}
+.catalog{padding:26px 0 24px}
+.section-heading{margin-bottom:18px}
+.section-heading h2{font-size:25px;line-height:1.15}
+.product-grid{grid-template-columns:repeat(42,minmax(0,1fr));gap:20px 16px}
+.product-card{grid-column:span 7;min-width:0;min-height:0;border:0;border-radius:6px;background:#f2f5f7}
+.product-card:nth-child(n+7){grid-column:span 6}
+.product-card .product-visual{height:auto;aspect-ratio:1.3;background-size:contain;background-position:center!important;background-color:#f4f4f4}
+.product-card>div:last-child{padding:9px 12px 13px;min-height:63px}
+.product-card strong{font-size:11px;line-height:1.4}
+.product-card small{display:block;font-size:9px;line-height:1.5;margin-top:5px}
+.solutions{padding:36px 0 24px;background:linear-gradient(90deg,#001e35 0%,rgba(0,30,53,.94) 31%,rgba(0,30,53,.14) 68%,rgba(0,18,32,.72)),url('assets/solutions-workshop.png') center/cover}
+.solutions-grid{grid-template-columns:1.35fr .7fr 1fr;gap:22px;min-height:208px}
+.solutions-copy h2{font-size:25px;line-height:1.15}
+.solutions-copy>p:not(.eyebrow){font-size:11px;line-height:1.5;max-width:350px}
+.solutions-copy .button{min-height:34px;font-size:10px;border-color:#2cbafa;padding:7px 20px}
+.solution-list{align-self:end;padding:0 0 0 20px;margin:0 0 2px}
+.solution-list li{font-size:10px;margin:10px 0;display:flex;align-items:center;gap:9px}
+.solution-list li:before{content:none}
+.solution-list svg{width:26px;height:26px;padding:4px;border:1px solid #54bcf1;border-radius:5px;color:#91d9ff}
+.contract-card{justify-self:end;align-self:end;background:rgba(0,24,42,.52);backdrop-filter:blur(5px);color:white;box-shadow:none;padding:0 12px 0;width:230px}
+.contract-card p{background:white;border-left:7px solid #00adf2;color:#00619a;font-size:13px;padding:10px;margin:0 0 6px}
+.contract-card strong{font:800 31px/1.1 var(--body);color:white;white-space:nowrap}
+.contract-card strong b{font-size:63px}
+.contract-card span{color:white;font-size:11px}
+.contract-card button{margin:15px 0 0;min-height:38px}
+.company{padding:0}
+.company-grid{width:100%;max-width:1440px;grid-template-columns:47% 53%}
+.building-photo{min-height:225px;background:url('assets/company-exterior.png') center/cover;clip-path:polygon(0 0,100% 0,91% 100%,0 100%)}
+.company-copy{padding:18px 5% 15px;background:white}
+.company h2{font-size:20px;line-height:1.2}
+.company-copy>p:not(.eyebrow){font-size:10px;max-width:405px;margin:9px 0}
+.company .eyebrow{font-size:9px;margin-bottom:4px}
+.values{margin:15px 0 12px;gap:8px}
+.values span{border:0;border-right:1px solid #d6e0e6;padding:0 8px 0 0;font-size:8px;display:flex;align-items:center;gap:8px;line-height:1.3}
+.values svg{color:var(--blue);width:25px;height:25px;flex-shrink:0}
+.values span:last-child{border:0}
+.company .button{min-height:29px;padding:5px 20px;font-size:9px}
+.contact{padding:0;background:white}
+.contact-grid{width:100%;max-width:1440px;grid-template-columns:minmax(0,47fr) minmax(0,28fr) minmax(0,25fr);box-shadow:none;gap:3px}
+.steps{padding:15px 10% 18px}
+.steps .eyebrow{font-size:18px;color:white;letter-spacing:0;text-transform:none;margin:0;font-weight:800}
+.steps h2{font:600 11px/1.4 var(--body);margin-top:3px}
+.steps ol{margin-top:20px;gap:12px}
+.steps li{position:relative;text-align:center;border-right:1px solid #1c608d;padding-right:12px}
+.steps li:last-child{border:0}
+.steps li>b{position:absolute;top:0;left:0;width:24px;height:24px;border:0;background:#0089df;color:white}
+.step-icon{margin:0 auto;width:52px;height:52px;display:grid;place-items:center;border:1px solid #1a9bd4;border-radius:50%;color:#d4f3ff}
+.step-icon svg{width:27px;height:27px}
+.steps li span{font-size:8px;margin-top:9px}
+.steps li strong{font-size:9px}
+.quote-form{padding:10px 23px;background:#f1f5f9;gap:4px}
+.quote-form .eyebrow{display:none}
+.quote-form h2{font-size:15px;line-height:1.2;margin:0;color:#00629e}
+.quote-form .form-intro{font-size:9px;line-height:1.3;margin:0 0 3px}
+.quote-form label{font-size:8px;line-height:1.15}
+.quote-form input,.quote-form select{height:23px;margin-top:2px;font-size:10px}
+.quote-form .button{min-height:31px;padding:5px 12px;border-radius:4px;font-size:10px;margin-top:3px}
+.contact-details{padding:12px 22px;background:#f4f7fa;border:0}
+.contact-details p{font-size:9px;margin-bottom:9px;position:relative;padding-left:34px;min-height:28px}
+.contact-details p>svg{position:absolute;left:0;top:4px;width:23px;height:23px;color:var(--blue)}
+.contact-details p:first-child>svg{color:#16bd62}
+.contact-details p:nth-child(3)>svg{color:#ba287b}
+.contact-details strong{font-size:8px}
+.marketplace{padding:0 0 0 34px;border:0;font-size:9px}
+footer{padding:20px 0;background:#122333}
+footer .brand{font-size:29px}
+footer .brand .alpha{font-size:69px}
+footer .brand small{color:white;font-size:7px}
+footer .container>p{font-size:9px}
+.whatsapp-float{display:grid;place-items:center;width:46px;height:46px;font-size:0}
+.whatsapp-float svg{width:29px;height:29px}
+#productDialog[open]{display:grid}
+.dialog-image{background-size:contain;background-repeat:no-repeat;background-color:#f5f6f7}
+:focus-visible{outline:3px solid #04a5eb;outline-offset:4px}
+@media(min-width:1450px){.hero{height:450px}.hero-content{padding-top:78px}}
+@media(max-width:1100px) and (min-width:921px){.topbar{gap:18px;padding-inline:3%}.topbar nav{gap:14px;font-size:9px}.brand{font-size:29px}.brand .alpha{font-size:75px}.header-contact{gap:10px;font-size:9px}.quote-mini{padding:10px 12px}.header-instagram{display:none}.hero-content{padding-top:52px}.hero{height:365px}h1{font-size:34px}.hero-copy{font-size:12px;max-width:335px}.brands-row>p{min-width:240px}}
+@media(max-width:920px){.topbar{height:76px}.hero{height:410px}.hero-content{padding-top:65px}.brands-row{gap:20px}.brands-row>p{min-width:160px;font-size:11px}.brand-list strong{font-size:26px}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-card,.product-card:nth-child(n+7){grid-column:auto}.solutions-grid{grid-template-columns:1fr 1fr}.contract-card{grid-column:2;grid-row:1/3;align-self:center}.solution-list{grid-column:1;border:0;padding:0}.company-grid{grid-template-columns:44% 56%}.values{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr 1fr}.contact-details{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr))}.steps{padding:25px}.quote-form{padding:20px}.quote-form input,.quote-form select{height:32px}.marketplace{grid-column:1/-1}}
+@media(max-width:600px){html{scroll-padding-top:70px}.topbar{height:70px;padding-inline:5%}.brand{font-size:29px}.brand .alpha{font-size:69px}.container{width:90%}.hero{height:480px}.hero-content{padding-top:52px}h1{font-size:32px;line-height:1.08}.hero-copy{font-size:13px;max-width:310px}.hero-photo{background-position:68% center}.hero-shade{background:linear-gradient(90deg,rgba(0,19,34,.94),rgba(0,19,34,.67))}.actions{gap:10px}.brands{padding:16px 0}.brands-row>p{margin:0 0 10px}.brand-list{min-height:60px;gap:23px;padding-inline:15px}.catalog{padding:25px 0}.section-heading h2{font-size:23px}.section-heading>a{max-width:90px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-card strong{font-size:12px}.product-card small{font-size:10px}.product-card>div:last-child{padding:10px}.solutions{padding:30px 0;background-position:65% center}.solutions-grid{grid-template-columns:1fr}.solutions-copy h2{font-size:25px}.solutions-copy>p:not(.eyebrow){font-size:13px}.solution-list li{font-size:12px}.contract-card{grid-column:1;grid-row:auto;justify-self:start;width:240px}.company-grid,.contact-grid{width:100%;grid-template-columns:1fr}.building-photo{min-height:230px;clip-path:none}.company-copy{padding:25px 5%}.company h2{font-size:22px}.company-copy>p:not(.eyebrow){font-size:13px}.values span{font-size:10px}.company .button{min-height:40px;font-size:11px}.steps{padding:24px 5%}.steps li span{font-size:10px}.steps li strong{font-size:11px}.quote-form{padding:22px 5%;gap:9px}.quote-form h2{font-size:21px}.quote-form .form-intro{font-size:12px}.quote-form label{font-size:12px}.quote-form input,.quote-form select{height:42px;font-size:16px}.quote-form .button{min-height:44px;font-size:12px}.contact-details{padding:22px 5%;grid-template-columns:1fr 1fr}.contact-details p,.contact-details strong,.marketplace{font-size:11px}.steps li>b{left:4px}.menu-button{min-width:44px;min-height:44px;justify-content:center;align-items:center}.button{min-height:44px}.dialog-body h2{font-size:28px}.hero-quick{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
