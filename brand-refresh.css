@@ -1,0 +1,81 @@
+@font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Medium.woff2') format('woff2');font-weight:500 600;font-display:swap}
+@font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Bold.woff2') format('woff2');font-weight:700 900;font-display:swap}
+@font-face{font-family:'SKF Display';src:url('assets/fonts/SKFDisplay-Bold.woff2') format('woff2');font-weight:700 900;font-display:swap}
+:root{--body:'SKF Sans',sans-serif;--display:'SKF Display','SKF Sans',sans-serif;--action:#007dc2;--action-hover:#005f9f;--radius:4px}
+body{font-family:var(--body);font-size:16px;line-height:1.6;background:linear-gradient(rgba(244,248,250,.93),rgba(244,248,250,.93)),url('assets/industrial-background.jpg') center top/cover fixed}
+h1,h2{font-family:var(--body);letter-spacing:0}
+html{scroll-padding-top:138px}
+.topbar{height:126px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:24px;padding:8px 3%;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+.topbar>.brand{justify-self:start;min-width:0}
+.topbar .brand-logo{width:210px;height:112px;object-fit:contain}
+.topbar nav{margin:0;justify-self:center;gap:24px;font-family:var(--body);font-size:15px;font-weight:600}
+.topbar nav a{min-height:44px;padding:10px 0;white-space:nowrap}
+.header-contact{justify-self:end;gap:16px;font-size:13px}
+.header-contact .social-contact{display:grid;grid-template-columns:23px auto;align-items:center;column-gap:8px;min-height:44px}
+.header-contact .social-contact .brand-icon{grid-row:1/3}
+.header-contact small{font-size:11px}
+.header-contact .quote-mini{font-size:13px}
+.brand-icon{display:inline-block;width:22px;height:22px;object-fit:contain;flex-shrink:0}
+.brand-icon.whatsapp{filter:invert(51%) sepia(80%) saturate(550%) hue-rotate(93deg) brightness(90%)}
+.brand-icon.instagram{filter:invert(30%) sepia(59%) saturate(1745%) hue-rotate(291deg)}
+.button,.quote-mini,.contract-card button,.company .button,.solutions-copy .button,.contact .quote-form .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 18px;border-radius:4px;font:700 15px/1.3 var(--body);transition:transform .2s,box-shadow .2s,background-color .2s,border-color .2s}
+.button.primary,.quote-mini,.contract-card button{background:var(--action);box-shadow:0 10px 24px rgba(0,95,159,.16);color:white}
+.button.primary:hover,.quote-mini:hover,.contract-card button:hover{background:var(--action-hover);transform:translateY(-2px);box-shadow:0 12px 26px rgba(17,35,52,.15)}
+.button:active,.quote-mini:active,.contract-card button:active{transform:translateY(0) scale(.98)}
+.button.ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.65)}
+.button.ghost:hover{background:rgba(255,255,255,.18)}
+.button .brand-icon,.whatsapp-float .brand-icon{filter:brightness(0) invert(1)}
+.hero{height:auto;min-height:465px}
+.hero-content{padding-top:54px;padding-bottom:44px}
+.hero h1{font-family:var(--body);font-size:46px;line-height:1.08;max-width:620px;font-weight:700}
+.hero-copy{font-size:17px;line-height:1.55;max-width:480px;margin:18px 0 24px}
+.eyebrow{font-size:13px;letter-spacing:0}
+.hero-quick{width:220px}.hero-quick b{font-size:12px}
+.catalog,.directory,.contact{background:transparent}
+.brands{background:rgba(240,245,248,.8)}
+.catalog{padding-block:36px}
+.section-heading h2{font-size:32px;line-height:1.15}
+.section-heading>a{font-size:14px;min-height:44px}
+.product-card{background:rgba(250,252,253,.96)}
+.product-card strong{font-size:16px;line-height:1.3}
+.product-card small{font-size:13px;line-height:1.4}
+.product-card>div:last-child{padding:14px 12px;min-height:88px}
+.solutions{padding-block:44px}
+.solutions-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr) minmax(0,.9fr);gap:24px}
+.solutions-copy h2{font-size:31px;line-height:1.15}
+.solutions-copy>p:not(.eyebrow){font-size:16px;line-height:1.6;max-width:440px}
+.solution-list li{font-size:14px;line-height:1.4;margin:15px 0}
+.solution-list svg{flex-shrink:0}
+.contract-card{width:260px;max-width:100%;padding:0 12px 12px}
+.contract-card p{font-size:16px;line-height:1.3}
+.contract-card span{font-size:14px}
+.contract-card button{width:100%;font-size:14px}
+.company h2{font-size:36px}
+.company .company-copy>p:not(.eyebrow){font-size:17px;line-height:1.65}
+.company .eyebrow{font-size:13px}
+.company .values span{font-size:14px}
+.contact-heading h2{font-size:36px}
+.contact-heading>p:last-child{font-size:17px}
+.contact .quote-form h2{font-size:26px}
+.contact .quote-form .form-intro,.contact .quote-form label{font-size:15px}
+.contact .contact-details p{font-size:16px}
+.contact .contact-details strong,.contact .marketplace{font-size:14px}
+.contact .contact-details p>.brand-icon{position:absolute;left:0;top:7px;width:27px;height:27px}
+.contact input,.contact select{background:rgba(255,255,255,.95)}
+.full-product-copy strong{font-size:18px}.full-product-copy small,.full-product-copy>span{font-size:14px}.full-product-copy b{font-size:14px}
+.directory h1{font-size:38px}
+.partner-entry{background:rgba(255,255,255,.94)}
+.partner-entry h2{font-size:23px}.partner-entry a{font-size:15px}
+.dialog-description{font-size:16px}.dialog-features{font-size:14px}.dialog-body h2{font-size:34px}.plan-points span,.saving{font-size:15px}
+.site-footer{padding:24px 0;background:linear-gradient(90deg,#fff 0%,#f4f7f8 24%,#dbe6eb 50%,#b7cbd7 100%);color:var(--ink);border-top:1px solid rgba(8,32,57,.1)}
+.site-footer .footer-inner{display:grid;grid-template-columns:220px 1fr auto;gap:40px;align-items:center}
+.site-footer .brand{background:transparent;padding:0;border-radius:0;box-shadow:none}
+.site-footer .brand-logo{width:210px;height:135px;object-fit:contain}
+.footer-copy strong{font-size:18px}.footer-copy p{font-size:15px;margin:4px 0 12px}.footer-copy small{font-size:13px}
+.footer-social{display:flex;gap:12px}.footer-social a{display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(8,32,57,.25);border-radius:4px}.footer-social a:hover{background:rgba(255,255,255,.6)}
+.footer-social img{width:23px;height:23px}
+.whatsapp-float{width:56px;height:56px}.whatsapp-float .brand-icon{width:29px;height:29px}
+@media(max-width:1550px){.header-contact .social-contact{font-size:0;display:flex;gap:0}.header-contact .social-contact small{display:none}.header-contact .social-contact .brand-icon{width:24px;height:24px}.topbar nav{gap:20px}.header-contact{gap:12px}}
+@media(max-width:1100px){.topbar{display:flex;justify-content:space-between;height:104px;padding-inline:5%}.topbar .brand-logo{width:170px;height:94px}.topbar nav,.header-contact{display:none}.menu-button{display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent}.menu-button i{width:24px;border-top:2px solid var(--ink)}.topbar.menu-open{height:auto;display:flex;flex-wrap:wrap}.topbar.menu-open nav{display:flex;flex-direction:column;width:100%;align-items:stretch;gap:0;order:3}.topbar.menu-open nav a{padding:12px 0}.hero h1{font-size:40px}.hero-copy{font-size:16px}.solutions-grid{grid-template-columns:1fr 1fr}.contract-card{grid-column:2;grid-row:1/3}.solution-list{grid-column:1}.site-footer .footer-inner{gap:24px;grid-template-columns:170px 1fr auto}.site-footer .brand-logo{width:160px;height:120px}html{scroll-padding-top:116px}}
+@media(max-width:600px){body{background-attachment:scroll}.topbar{height:100px}.topbar .brand-logo{width:160px;height:90px}.hero{min-height:530px}.hero-content{padding-top:40px;padding-bottom:38px}.hero h1{font-size:34px;line-height:1.1}.hero h1 br{display:none}.hero-copy{font-size:16px;max-width:100%}.section-heading h2{font-size:28px}.section-heading>a{font-size:12px;max-width:115px}.product-card strong{font-size:16px}.product-card small{font-size:13px}.solutions-grid{grid-template-columns:1fr}.contract-card{grid-column:1;grid-row:auto}.solutions-copy h2{font-size:29px}.solution-list li{font-size:15px}.company h2{font-size:30px}.company .company-copy>p:not(.eyebrow){font-size:16px}.company .values span{font-size:13px}.company .company-grid{padding:38px 0}.contact-heading h2{font-size:31px}.contact-heading>p:last-child{font-size:16px}.contact .contact-details p{font-size:15px}.full-product-copy strong{font-size:16px}.full-product-copy>span{font-size:14px}.partner-entry a{font-size:13px}.site-footer .footer-inner{grid-template-columns:1fr;gap:16px;justify-items:start}.site-footer .brand-logo{width:185px;height:120px}.site-footer{padding:20px 0 34px;background:linear-gradient(110deg,#fff,#dbe6eb)}.footer-copy strong{font-size:17px}.footer-social{padding-right:60px}.directory h1{font-size:32px}html{scroll-padding-top:112px}}

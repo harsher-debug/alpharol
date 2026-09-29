@@ -98,3 +98,23 @@ function showPage(){
 window.addEventListener('hashchange',showPage);
 showPage();
 if(window.lucide)lucide.createIcons();
+
+function socialImage(network){
+  return '<img class="brand-icon '+network+'" src="assets/icons/'+network+'.svg" alt="" width="24" height="24" />';
+}
+document.querySelector('.whatsapp-float').innerHTML=socialImage('whatsapp');
+document.querySelectorAll('.header-contact a[href*="wa.me"],.header-contact a[href*="instagram.com"]').forEach(link=>{
+  const network=link.href.includes('wa.me')?'whatsapp':'instagram';
+  link.classList.add('social-contact');
+  link.setAttribute('aria-label',network==='whatsapp'?'WhatsApp: (48) 99847-8255':'Instagram: @AlphaRol_');
+  link.title=link.getAttribute('aria-label');
+  link.insertAdjacentHTML('afterbegin',socialImage(network));
+});
+document.querySelectorAll('.contact-details p').forEach(row=>{
+  const link=row.querySelector('a');
+  if(!link)return;
+  const network=link.href.includes('wa.me')?'whatsapp':link.href.includes('instagram.com')?'instagram':null;
+  if(network){row.querySelector('svg')?.remove();row.insertAdjacentHTML('afterbegin',socialImage(network));}
+});
+document.querySelectorAll('a.button[href*="wa.me"],.quote-form button').forEach(button=>button.insertAdjacentHTML('afterbegin',socialImage('whatsapp')));
+document.querySelectorAll('.partner-entry a[href*="wa.me"]').forEach(link=>{link.querySelector('svg')?.remove();link.insertAdjacentHTML('beforeend',socialImage('whatsapp'));});
