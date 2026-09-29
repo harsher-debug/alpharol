@@ -106,26 +106,25 @@ function showPage(){
   });
   document.title=directory ? (route==='#catalogo'?'Produtos':'Parceiros')+' | AlphaRol' : 'AlphaRol | Soluções Industriais';
   requestAnimationFrame(()=>{
+    if(location.hash!==route)return;
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
     if(directory){
       window.scrollTo({top:0,behavior:'instant'});
       document.querySelector(route+' h1').focus({preventScroll:true});
+    }else if(route==='#inicio'){
+      window.scrollTo({top:0,left:0,behavior:'instant'});
     }else if(route){
       document.getElementById(route.slice(1))?.scrollIntoView({behavior:'instant'});
     }
-    if(window.ScrollTrigger)ScrollTrigger.refresh();
   });
 }
 window.addEventListener('hashchange',showPage);
 showPage();
 document.querySelectorAll('a[href="#inicio"]').forEach(link=>link.addEventListener('click',event=>{
   event.preventDefault();
-  if(location.hash==='#inicio'||location.hash===''){
-    showPage();
-    window.scrollTo({top:0,behavior:'smooth'});
-  }else{
-    location.hash='inicio';
-    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'smooth'}));
-  }
+  setMenuOpen(false);
+  if(location.hash!=='#inicio')history.pushState(null,'','#inicio');
+  showPage();
 }));
 if(window.lucide)lucide.createIcons();
 
