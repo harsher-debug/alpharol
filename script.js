@@ -49,7 +49,7 @@ const partners = [
   {name:'SKF', image:'skf.svg', url:'https://www.skf.com/br'},
   {name:'NSK', image:'nsk.svg', url:'https://www.nsk.com/'},
   {name:'TIMKEN', image:'timken.svg', url:'https://www.timken.com/'},
-  {name:'FAG', image:'fag.png', url:'https://www.schaeffler.com/'},
+  {name:'FAG', image:'fag.svg', url:'https://www.schaeffler.com/'},
   {name:'INA', image:'ina.svg', url:'https://www.schaeffler.com/'},
   {name:'NTN', image:'ntn.svg', url:'https://www.ntnglobal.com/en/'}
 ];
