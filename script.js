@@ -41,7 +41,7 @@ productSelect.innerHTML='<option value="">O que você precisa?</option>'+product
 productSelect.required=true;
 if(window.lucide)lucide.createIcons();
 const partners = [
-  {name:'SKF', image:'skf.jpg', url:'https://www.skf.com/br'},
+  {name:'SKF', image:'skf.svg', url:'https://www.skf.com/br'},
   {name:'NSK', image:'nsk.svg', url:'https://www.nsk.com/'},
   {name:'TIMKEN', image:'timken.svg', url:'https://www.timken.com/'},
   {name:'FAG', image:'fag.png', url:'https://www.schaeffler.com/'},
