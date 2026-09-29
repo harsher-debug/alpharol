@@ -23,3 +23,28 @@
 @media(min-width:601px) and (max-width:1050px){.site-footer.site-footer{background:linear-gradient(90deg,#fff 0%,#eef7fc 43%,#086da8 53%,#00619c 100%)}}
 @media(max-width:1050px){.site-footer{background:linear-gradient(105deg,#fff 0%,#eef7fc 43%,#1879b1 70%,#00619c 100%)}.site-footer .footer-inner{grid-template-columns:1fr 1fr;gap:24px 44px}.footer-identity{grid-column:1;grid-row:1}.footer-links{grid-column:1}.footer-reach{grid-column:2;grid-row:1/4}.site-footer .footer-bottom{align-items:flex-start}.footer-bottom small{max-width:50%}}
 @media(max-width:600px){.site-footer{padding-top:42px;background:linear-gradient(to bottom,#fff 0%,#edf7fc 40%,#d9edf9 55%,#086da8 60%,#00619c 100%)}.site-footer .footer-inner{grid-template-columns:1fr 1fr;gap:24px 18px;padding-bottom:24px}.footer-identity{grid-column:1/-1;grid-row:auto}.footer-identity>p{max-width:100%}.site-footer .brand-logo{width:195px;height:130px}.footer-links{grid-column:auto}.footer-reach{grid-column:1/-1;grid-row:auto;padding-top:24px}.site-footer h2{font-size:17px;margin-top:0}.footer-links>a{font-size:14px;min-height:44px}.footer-reach>a:not(.button),.footer-reach>p{font-size:15px}.site-footer .footer-bottom{display:flex;flex-direction:column;gap:8px;border-color:rgba(255,255,255,.25)}.footer-bottom small{color:white;max-width:none;font-size:12px}.footer-bottom>a{padding-right:60px}}
+
+/* Stronger contrast for secondary copy placed over white and pale industrial surfaces. */
+:root{--surface-copy:#223f54;--surface-copy-strong:#102b40}
+.topbar .header-contact small,
+.product-card small,
+.full-product-copy small,
+.full-product-copy>span,
+#resultCount,
+.benefits-heading>p:last-child,
+.benefit-card p,
+.contact-heading>p:last-child,
+.contact .quote-form .form-intro,
+.contact .quote-form label,
+.contact .contact-details p,
+.footer-identity>p,
+.footer-bottom small{color:var(--surface-copy)}
+.quote-form input,
+.quote-form select,
+.catalog-search input{color:var(--surface-copy-strong)}
+.footer-links>a,
+.site-footer h2,
+.partner-entry h2,
+.full-product-copy strong,
+.benefit-card h3{color:var(--surface-copy-strong)}
+@media(max-width:600px){.footer-bottom small{color:white}}
