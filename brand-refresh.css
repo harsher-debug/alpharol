@@ -1,4 +1,21 @@
 @font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+.service-benefits{padding:76px 0 84px;background:rgba(246,249,251,.94);border-block:1px solid rgba(8,32,57,.08)}
+.benefits-heading{max-width:740px;margin-bottom:32px}
+.benefits-heading h2{font-size:34px;line-height:1.2;margin:0 0 16px}
+.benefits-heading>p:last-child{font-size:17px;line-height:1.6;color:#526c7e;max-width:660px;margin:0}
+.benefits-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.benefit-card{display:flex;flex-direction:column;align-items:flex-start;padding:26px 22px;background:#fff;border:1px solid #dce6ed;border-radius:6px;box-shadow:0 8px 22px rgba(8,32,57,.04);transition:transform .2s,box-shadow .2s}
+.benefit-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(8,32,57,.09)}
+.benefit-icon{display:grid;place-items:center;width:48px;height:48px;background:#ecf6fc;border-radius:6px;color:#007dc2;margin-bottom:22px}
+.benefit-icon svg{width:27px;height:27px}
+.benefit-card h3{font-size:21px;line-height:1.25;margin:0 0 12px}
+.benefit-card p{font-size:16px;line-height:1.65;color:#526c7e;margin:0 0 24px}
+.benefit-card>a,.benefit-card>button{margin-top:auto;display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 0;border:0;background:none;color:#0069a9;font:700 14px/1.5 var(--body);text-align:left;cursor:pointer}
+.benefit-card>a:hover,.benefit-card>button:hover{text-decoration:underline;text-underline-offset:4px}
+.benefit-card>a svg,.benefit-card>button svg{width:18px;height:18px;flex-shrink:0}
+@media(max-width:1000px){.benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.service-benefits{padding:44px 0 48px}.benefits-heading h2{font-size:28px}.benefits-heading h2 br{display:none}.benefits-heading>p:last-child{font-size:16px}.benefits-grid{grid-template-columns:1fr;gap:16px}.benefit-card{padding:24px}.benefit-icon{margin-bottom:16px}.benefit-card h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.benefit-card{transition:none}.benefit-card:hover{transform:none}}
 @font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Medium.woff2') format('woff2');font-weight:500 600;font-display:swap}
 @font-face{font-family:'SKF Sans';src:url('assets/fonts/SKFSans-Bold.woff2') format('woff2');font-weight:700 900;font-display:swap}
 @font-face{font-family:'SKF Display';src:url('assets/fonts/SKFDisplay-Bold.woff2') format('woff2');font-weight:700 900;font-display:swap}
