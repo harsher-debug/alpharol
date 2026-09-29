@@ -120,11 +120,17 @@ function showPage(){
 }
 window.addEventListener('hashchange',showPage);
 showPage();
+function scrollToTop(){
+  window.scrollTo({top:0,left:0,behavior:'smooth'});
+  document.documentElement.scrollTop=0;
+  document.body.scrollTop=0;
+}
 document.querySelectorAll('a[href="#inicio"]').forEach(link=>link.addEventListener('click',event=>{
   event.preventDefault();
   setMenuOpen(false);
   if(location.hash!=='#inicio')history.pushState(null,'','#inicio');
   showPage();
+  requestAnimationFrame(scrollToTop);
 }));
 if(window.lucide)lucide.createIcons();
 
