@@ -26,9 +26,11 @@
   .container > *, .solutions-grid > *, .contact-grid > * { min-width: 0; }
   .hero { min-height: 0; }
   .hero-content { padding-block: 40px; }
-  .hero h1 { font-size: 34px; line-height: 1.18; }
+  .hero h1 { max-width: 100%; font-size: 34px; line-height: 1.14; }
   .hero h1 br, .section-heading h2 br, .solutions-copy h2 br, .benefits-heading h2 br { display: initial; }
-  .hero-copy { max-width: 100%; font-size: 16px; line-height: 1.65; margin-block: 22px; }
+  .hero h1 br:nth-of-type(2) { display: none; }
+  .hero h1 em { display: block; margin-top: 2px; }
+  .hero-copy { max-width: 100%; font-size: 16px; line-height: 1.55; margin: 18px 0 22px; }
   .hero-shade { background: rgba(0, 20, 34, .8); }
   .eyebrow { font-size: 12px; line-height: 1.6; }
   .actions { flex-direction: column; align-items: stretch; gap: 12px; }
