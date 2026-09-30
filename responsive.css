@@ -78,6 +78,7 @@
   .contact .contact-details { padding: 28px 0 0; border-left: 0; border-top: 1px solid #cbd8e3; gap: 24px; }
   .contact .contact-details p { font-size: 16px; padding-left: 38px; }
   .contact-details a { padding-block: 6px; }
+  .marketplace-note { font-size: 13px; margin-top: 0; }
   .directory { padding-block: 28px 44px; }
   .directory h1 { font-size: 30px; line-height: 1.25; }
   .catalog-search label, #resultCount { font-size: 15px; }
@@ -136,6 +137,7 @@
 .step-icon svg{width:25px;height:25px}
 .step-item h3{font-size:20px;line-height:1.3;color:var(--surface-copy-strong);margin:0 0 12px}
 .step-item p{font-size:15px;line-height:1.65;color:var(--surface-copy);margin:0;max-width:230px}
+.marketplace-note{display:inline-flex;align-items:center;align-self:flex-start;margin-top:2px;padding:9px 13px;border:1px solid #cbd8e3;border-radius:4px;background:rgba(255,255,255,.72);color:#6a5100;font-size:13px;font-weight:700;line-height:1.4}
 @media(max-width:760px){
   .operating-steps{padding:46px 0 50px}
   .steps-heading{margin-bottom:28px}
