@@ -111,7 +111,7 @@ function showPage(){
     link.classList.toggle('is-active',current);
     if(current)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
   });
-  document.title=directory ? (route==='#catalogo'?'Produtos':'Parceiros')+' | AlphaRol' : 'AlphaRol | Soluções Industriais';
+  document.title=directory ? (route==='#catalogo'?'Produtos':'Parceiros')+' | AlphaRol' : 'Rolamentos Industriais em Palhoça SC | AlphaRol';
   requestAnimationFrame(()=>{
     if(location.hash!==route)return;
     if(window.ScrollTrigger)ScrollTrigger.refresh();
